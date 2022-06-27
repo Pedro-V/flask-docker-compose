@@ -1,0 +1,26 @@
+version: "3.5"
+services:
+  web-fe:
+    build: .
+    # Usando o arquivo do compose para se sobrepor ao comando CMD do Dockerfile
+    command: python3 app.py
+    ports:
+      - target: 5000
+        published: 5000
+    networks:
+      - counter-net
+    volumes:
+      - type: volume
+        source: counter-vol
+        target: /code
+  redis:
+    image: "redis:alpine"
+    networks:
+      counter-net:
+      # Mesma network que o app frontend, logo os dois container vão trabalhar em conjunto
+
+networks:
+  counter-net:
+
+volumes:
+  counter-vol:
