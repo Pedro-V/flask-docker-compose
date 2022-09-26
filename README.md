@@ -5,7 +5,7 @@ O Docker Compose v2 foi reescrito em `go` e tem algumas funcionalidades a mais. 
 * Um app muito simples usando `flask`
 * Um backend rudimentar usando `redis`
 
-O foco não é o frontend/backend, mas só a capacidade de rodar múltiplos containers de forma coordenada e *seamless* usando `docker`, que é um software que eu ainda estou aprendendo. 
+O foco não é o frontend/backend, mas só a capacidade de rodar múltiplos containers de forma coordenada e *seamless* usando o `docker`.
 
 ## Rodando
 
